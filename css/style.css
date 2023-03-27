@@ -171,9 +171,9 @@ a:hover, a:active {
     border: 2px solid #333333;
 }
 .hero-content .btn:hover, .hero-content .btn:active {
-    background: #00acd7;
+    background: #162169;
     color: #F1F1F1;
-    border: 2px solid #00acd7;
+    border: 2px solid #162169;
 }
 
 .btn, .btn:visited  {
@@ -193,9 +193,9 @@ a:hover, a:active {
 }
 
 .btn:hover, .btn:focus, .btn:active {
-    background: #00acd7;
+    background: #162169;
     color: #F1F1F1;
-    border: 2px solid #00acd7;
+    border: 2px solid #162169;
 }
 
 /* Typography
@@ -264,7 +264,7 @@ section p {
 }
 
 .mobile-nav span a:hover {
-    color: #00acd7;
+    color: #162169;
 }
 
 footer {
@@ -311,9 +311,9 @@ form > input, form > textarea {
 }
 
 .submit:hover {
-    background-color: #00acd7;
+    background-color: #162169;
     color: #F1F1F1;
-    border: 2px solid #00acd7;
+    border: 2px solid #162169;
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
@@ -383,6 +383,13 @@ form > input, form > textarea {
     .contact-content {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .aboutme-content {
+        display: flex;
+        text-align: center;
         justify-content: center;
         align-items: center;
     }
