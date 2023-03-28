@@ -1,3 +1,84 @@
+// Visualizing data in a user friendly way
+// Project 1 chart
+
+// var xValues = ["HTML", "CSS", "JavaScript"];
+// var yValues = [58.1, 39.4, 2.5];
+// var barColors = [
+//     "#162169",
+//     "#00acd7",
+//     "#ff2ad4"
+// ];
+
+// new Chart("confectioneryChart", {
+//     type: "doughnut",
+//     data: {
+//         labels: xValues,
+//         datasets: [{
+//         backgroundColor: barColors,
+//         data: yValues
+//         }]
+// },
+// options: {
+//     title: {
+//     display: true,
+//     text: "Languages Displayed in Percentages"
+//     }
+// }
+// });
+
+// // Project 2 chart
+// var xValues = ["JavaScript", "CSS", "HTML"];
+// var yValues = [65.4, 23.2, 11.4];
+// var barColors = [
+//     "#00acd7", 
+//     "#ff2ad4",
+//     "#162169"
+    
+// ];
+
+// new Chart("topTracksChart", {
+// type: "doughnut",
+// data: {
+//     labels: xValues,
+//     datasets: [{
+//     backgroundColor: barColors,
+//     data: yValues
+//     }]
+// },
+// options: {
+//     title: {
+//     display: true,
+//     text: "Languages Displayed in Percentages"
+//     }
+// }
+// });
+
+// // Project 3 chart
+// var xValues = ["CSS", "HTML", "Javascript"];
+// var yValues = [48.6, 47.4, 4.0];
+// var barColors = [
+//     "#ff2ad4",
+//     "#162169",
+//     "#00acd7"
+// ];
+
+// new Chart("portfolioChart", {
+// type: "doughnut",
+// data: {
+//     labels: xValues,
+//     datasets: [{
+//     backgroundColor: barColors,
+//     data: yValues
+//     }]
+// },
+// options: {
+//     title: {
+//     display: true,
+//     text: "Languages Displayed in Percentages"
+//     }
+// }
+// });
+
 // Send contact form to API
 const contact = document.querySelector('.contactform');
 

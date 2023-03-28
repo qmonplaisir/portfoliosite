@@ -72,25 +72,25 @@ body {
 
 .projects-container {
     background: #00bbb3;
+    width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
     padding: 48px 0;
 }
 
 .projects-content {
     color: #F1F1F1;
     width: 100%;
-    max-width: 1000px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-evenly;
     align-items: center;
     padding: 12px;
 }
 
 .projects-item {
-    
+    padding: 10px;
 }
 
 .footer-container {
@@ -137,7 +137,7 @@ a {
     text-decoration: none;
 }
 
-a:visited {
+/* a:visited {
     
 }
 
@@ -146,7 +146,7 @@ a:focus {
 }
 a:hover, a:active {
 
-}
+} */
 
 .hero-content .btn, .hero-content .btn:visited  {
     width: 100%;
@@ -321,6 +321,14 @@ form > input, form > textarea {
 
 /* 	
 =============================================================================
+Chart
+=============================================================================
+*/
+
+
+
+/* 	
+=============================================================================
  MEDIA QUERIES
 =============================================================================
 */
@@ -380,7 +388,7 @@ form > input, form > textarea {
 
 @media only screen and (max-width: 768px) {
 
-    .contact-content {
+    .contact-content, .projects-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -394,4 +402,7 @@ form > input, form > textarea {
         align-items: center;
     }
 
+    .projects-container {
+        text-align: center;
+    }
 }
