@@ -98,3 +98,58 @@ contact.addEventListener('submit', event => {
         .then(data => console.log(data))
         .catch(error => console.log(error));
 });
+
+// Contact form validation
+    //Full Name
+
+var fullName = document.getElementById('fullname');
+var contactForm = document.getElementById('contactform');
+let fullNameErr = document.getElementById('nameErr');
+
+fullName.addEventListener('input', function(e) {
+    let regex = /[A-Za-z]+ [A-Za-z]+/i;
+    let currentValue = e.target.value;
+    let valid = regex.test(currentValue);
+
+    if(valid) {
+        fullNameErr.style.display = 'none'
+    } else {
+        fullNameErr.style.display = 'block'
+    }
+})
+
+    //E-mail
+
+    let email = document.getElementById('email');
+    
+    let emailErr = document.getElementById('emailErr');
+
+email.addEventListener('input', function(e) {
+    let regex = /[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+(?:\.[-A-Za-z0-9!#$%&'*+/=?^_`{|}~]+)*@(?:[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?\.)+[A-Za-z0-9](?:[-A-Za-z0-9]*[A-Za-z0-9])?/i;
+    let currentValue = e.target.value;
+    let valid = regex.test(currentValue);
+
+    if(valid) {
+        emailErr.style.display = 'none'
+    } else {
+        emailErr.style.display = 'block'
+    }
+})
+
+    //phone number
+
+    let phoneNum = document.getElementById('phonenum');
+    
+    let phoneNumErr = document.getElementById('phoneNumErr');
+
+phoneNum.addEventListener('input', function(e) {
+    let regex = /^([+-]?(?=\.\d|\d)(?:\d+)?(?:\.?\d*))(?:[Ee]([+-]?\d+))?[0-9]+\d{9}$/i;
+    let currentValue = e.target.value;
+    let valid = regex.test(currentValue);
+
+    if(valid) {
+        phoneNumErr.style.display = 'none'
+    } else {
+        phoneNumErr.style.display = 'block'
+    }
+})

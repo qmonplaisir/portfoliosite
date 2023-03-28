@@ -188,15 +188,18 @@
 
                 <form class="contactform">
                 
-                    <input type="text" name="name" placeholder="Full Name" required />
+                    <input id="fullname" type="text" name="name" placeholder="Full Name" aria-label="Full Name" required />
+                    <p id="nameErr" aria-label="Full Name Error">Please enter a valid First and Last Name.</p>
                 
-                    <input type="email" name="email" placeholder="E-mail" required />
+                    <input id="email" type="email" name="email" placeholder="E-mail" aria-label="E-mail" required />
+                    <p id="emailErr" aria-label="Full Name Error">Please enter a valid E-mail.</p>
 
-                    <input type="tel" name="phone_number" placeholder="Phone Number" required />
+                    <input id="phonenum" type="tel" name="phone_number" placeholder="Phone Number" aria-label="Phone Number" required />
+                    <p id="phoneNumErr" aria-label="Phone Number Error">Please enter a valid Phone Number.</p>
 
-                    <textarea name="message" cols="20" rows="2" placeholder="Message" required></textarea>
+                    <textarea name="message" cols="20" rows="2" placeholder="Message" aria-label="Message" required></textarea>
 
-                    <input type="submit" value="submit" class="submit" />
+                    <input type="submit" value="submit" class="submit" aria-label="Submit Button" />
 
                 </form>
 
