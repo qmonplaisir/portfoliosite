@@ -88,16 +88,39 @@ contact.addEventListener('submit', event => {
     const formData = new FormData(contact);
     const data = Object.fromEntries(formData);
 
-    fetch('https://getpantry.cloud/apiv1/pantry/c71cd673-64e5-44a9-b1ab-2bd00639c06c/basket/testBasket', {
-        method: 'POST', 
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    }).then(res => res.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error));
-});
+    // fetch('https://getpantry.cloud/apiv1/pantry/c71cd673-64e5-44a9-b1ab-2bd00639c06c/basket/testBasket', {
+    //     method: 'POST', 
+    //     headers: {
+    //         'Content-Type': 'application/json'
+    //     },
+    //     body: JSON.stringify(data)
+    // }).then(res => res.json())
+    //     .then(data => console.log(data))
+    //     .catch(error => console.log(error));
+
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify(data
+    );
+
+    const requestOptions = {
+    method: 'PUT',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+    };
+
+
+    fetch("https://getpantry.cloud/apiv1/pantry/c71cd673-64e5-44a9-b1ab-2bd00639c06c/basket/ContactForm", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result), document.getElementById("contactForm").style.display = "none", document.getElementById("formSubmit").innerText = "Thank You! Your form has been submitted,", document.getElementById("formSubmit2").innerText = "I'll get back to you faster than you can say HIRED.")
+    .catch(error => console.log('error', error));
+
+
+ });
+
+
 
 // Contact form validation
     //Full Name
