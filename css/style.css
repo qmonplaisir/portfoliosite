@@ -10,7 +10,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px 0;
+    padding: 1px 0;
+    
 }
 
 .header-content {
@@ -26,7 +27,7 @@ body {
 }
 
 .logo {
-    height: 125px;
+    height: 90px;
     width: auto;
 }
 
@@ -34,21 +35,27 @@ body {
     display: flex;
     background: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-546819.jpg&fm=jpg') center center no-repeat;
     background-size: cover;
-    height: 80vh;
+    /* height: 80vh;
     padding: 10;
-    margin: 10;
+    margin: 10; */
 }
 
 .hero-content {
     display: flex;
     width: 100%;
     text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    /* background: url('https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?cs=srgb&dl=pexels-luis-gomes-546819.jpg&fm=jpg') center center no-repeat;
+    background-size: cover; */
+    height: 80vh;
+    padding: 10;
+    margin: 10;
     padding: 24px;
     margin: 0 auto;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(0, 0, 0, 25%);
+   
 }
 
 .aboutme-container {
@@ -399,6 +406,14 @@ Chart
         border-bottom: solid 2px #00acd7;
     }
 
+   .projects-container {
+    text-align: center;
+   }
+   
+    a.btn {
+        display: inline-block;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -410,6 +425,11 @@ Chart
         align-items: center;
     }
 
+    .projects-content {
+        padding: 2px 30px;
+        margin: 30px;
+    }
+
     .aboutme-content {
         display: flex;
         text-align: center;
@@ -417,7 +437,67 @@ Chart
         align-items: center;
     }
 
+    a.btn {
+        display: inline-block;
+    }
+
     .projects-container {
         text-align: center;
+    }
+
+   .main-nav {
+        display: none;
+    }
+
+    .header-container {
+        position: fixed;
+        margin: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .hero-content {
+        margin-top: 118px;
+    }
+
+    .hamburger {
+        display: block;
+       
+    }
+
+    .navlinks {
+        list-style: none;
+        position: fixed;
+        left: -110%;
+        top: 104px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    ul#navigation1 li {
+        margin: 16px 0;
+    }
+
+    .navlinks.active {
+        left: 0;
+    }
+    
+    ul#navigation1 li a {
+        color: #00bbb3;
+        font-family: 'Cabin', sans-serif;
+    
+        border: solid 2px transparent;
+        text-transform: uppercase;
+    }
+    
+    ul#navigation1 li a:hover {
+        color: #00bbb3;
+        font-family: 'Cabin', sans-serif;
+        padding: 6px 12px;
+        border-bottom: solid 2px #00acd7;
     }
 }

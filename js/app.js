@@ -176,3 +176,17 @@ phoneNum.addEventListener('input', function(e) {
         phoneNumErr.style.display = 'block'
     }
 })
+
+// Mobile hamburger Nav
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".navlinks");
+
+hamburger.addEventListener("click", () => {
+    //hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+})
+
+document.querySelectorAll(".nav-atag").forEach(n => n.addEventListener("click", () => {
+    //hamburger.classList.toggle("active");
+    navLinks.classList.remove("active");
+}))
